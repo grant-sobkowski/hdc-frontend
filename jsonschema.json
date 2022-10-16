@@ -1,0 +1,43 @@
+{
+  "title": "Country",
+  "type": "object",
+  "properties": {
+    "index": {
+      "type": "string",
+      "description": "3-letter country code"
+    },
+    "policies": {
+      "type": "array", 
+      "items": {
+        "type": "object",
+        "properties": {
+          "name":{
+            "type": "string" 
+          },
+          "body":{
+            "type": "string"
+          },
+          "icon-link":{
+            "type": "string"
+          }
+        }
+
+      }
+    },
+    "statistics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name":{
+            "type": "string" 
+          },
+          "data":{
+            "type": "array"
+          }
+        }
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,6 @@
+.rsm-geography :hover {
+  fill: white !important
+}
+.rsm-geography:focus {
+  outline-width: 0px !important;
+}

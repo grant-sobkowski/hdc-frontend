@@ -1,0 +1,44 @@
+{
+  "USA": {
+    "name": "United States",
+    "policies":
+    {
+      "0": {
+        "name": "handwashing",
+        "body": "Handwashing facilities can help reduce infections",
+        "influence": ".321"
+      },
+      "1": {
+        "name": "stringency index",
+        "body": "Closing hospitals, schools, and other public facilities can help reduce infections",
+        "influence": ".201"
+      }
+    },
+    "statistics":
+    {
+      "deaths": [10, 12, 20, 30, 10, 20 ],
+      "infections": [60, 40, 30, 20, 10, 13]
+    }
+  },
+  "IND": {
+    "name": "India",
+    "policies":
+    {
+      "0": {
+        "name": "stringency index",
+        "body": "Closing hospitals, schools, and other public facilities can help reduce infections",
+        "influence": ".300"
+      },
+      "1": {
+        "name": "handwashing",
+        "body": "Handwashing facilities can help reduce infections",
+        "influence": ".201"
+      }
+    },
+    "statistics":
+    {
+      "deaths": [10, 12, 20, 30, 10, 20 ],
+      "infections": [60, 40, 30, 20, 10, 13]
+    }
+  }
+}
