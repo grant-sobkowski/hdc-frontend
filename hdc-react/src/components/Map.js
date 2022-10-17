@@ -13,7 +13,8 @@ export default function Map(props){
     console.log('custom click event, country = ', cevt.country)
   }, false)
   return(
-    <Box id='map' h='100%' w='70%' border='1px' display='inline-block'>
+    <Box id='map' h='100%' w='70%' border='1px' 
+    float='left' display='inline-block'>
       <ComposableMap>
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
@@ -28,11 +29,11 @@ export default function Map(props){
                   outline: "none !important"
                 },
                 hover: {
-                  fill: "#191970"
+                  fill: "#BCBCBC"
                 },
                 pressed: {
                   outline: "none",
-                  fill: '#E45'
+                  fill: '#f98c71'
                 }
               }} />
             ))
