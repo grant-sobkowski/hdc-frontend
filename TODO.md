@@ -60,10 +60,12 @@
   - [ ] create format for statistic(s)
   - [ ] create plots for statistics
 
+
 - Then
   - Policies?
   - Interactive Map?
   - Landing Page?
 - Misc.
   - [ ] Error for phone users
+  - [ ] Add foot note for 'significantly increased' in policy
   

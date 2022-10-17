@@ -4,12 +4,12 @@
     "policies":
     {
       "0": {
-        "name": "handwashing",
+        "name": "Handwashing",
         "body": "Handwashing facilities can help reduce infections",
         "influence": ".321"
       },
       "1": {
-        "name": "stringency index",
+        "name": "Stringency Index",
         "body": "Closing hospitals, schools, and other public facilities can help reduce infections",
         "influence": ".201"
       }
@@ -25,12 +25,12 @@
     "policies":
     {
       "0": {
-        "name": "stringency index",
+        "name": "Stringency Index",
         "body": "Closing hospitals, schools, and other public facilities can help reduce infections",
         "influence": ".300"
       },
       "1": {
-        "name": "handwashing",
+        "name": "Handwashing",
         "body": "Handwashing facilities can help reduce infections",
         "influence": ".201"
       }

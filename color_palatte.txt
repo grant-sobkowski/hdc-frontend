@@ -1,0 +1,6 @@
+main orange= #f76540
+lighter orange= #f98c71
+complimentary blue= #71def9 
+blue= #72dff6
+yellow= #f9ec75
+analagous pink= #f9719a 
