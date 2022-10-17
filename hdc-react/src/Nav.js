@@ -11,8 +11,8 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 export const Nav = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
-  const isDark = colorMode === "dark";
+  // const { colorMode, toggleColorMode } = useColorMode();
+  // const isDark = colorMode === "dark";
   const [display, changeDisplay] = useState("none");
   return (
     <Flex>
