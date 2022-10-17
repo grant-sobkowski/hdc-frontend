@@ -7,7 +7,7 @@ export default function Sidebar(props){
     console.log(data)
     console.log(data["USA"])
     console.log('country:', props["country"], typeof(props.country))
-    if (props.country == "" || !data[props.country]){
+    if (props.country === "" || !data[props.country]){
       console.log('invalid country')
       return -1;
     }

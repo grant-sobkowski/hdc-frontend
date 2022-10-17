@@ -15,16 +15,11 @@ function Search() {
   // }, country)
 
   return (
-    <Flex color="white">
-      <Box h="100vh">
-        {/* Header */}
-        <Header />
-        {/* Content */}
+    <Flex w='100%' color="white">
         <Box border="1px" w="100%" h="90vh">
           <Map setCountry={setCountry} />
           <Sidebar country={country} />
         </Box>
-      </Box>
     </Flex>
   );
 }
