@@ -1,5 +1,4 @@
 import React from "react";
-import { Box, Flex } from "@chakra-ui/react";
 import Plot from "react-plotly.js";
 
 const baseData = [
@@ -44,7 +43,7 @@ const baseLayout = {
   }
 }
 
-const TestPlot = (props) => {
+export default function Graph(props){
   console.log(baseData)
   //merges x and y values from props with styling
   const mergedData = [{...baseData[0], ...props.data[0]}]
@@ -56,5 +55,3 @@ const TestPlot = (props) => {
     />
   );
 };
-
-export default TestPlot;
