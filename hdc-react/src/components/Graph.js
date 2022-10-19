@@ -21,7 +21,7 @@ export default function Graph(props){
   const baseLayout = {
     width: 400, 
     height: 400, 
-    title: 'New Deaths',
+    title: 'New Infections Past 30 Days',
     paper_bgcolor: "#1a202c",
     plot_bgcolor: "#1a202c",
     bordercolor: "#1a202c",

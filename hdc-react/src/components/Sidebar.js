@@ -4,9 +4,14 @@ import Graph from "./Graph.js"
 import data from "../json/data.json";
 import getCountry from '../json/front-data.json';
 import newData from '../json/new-data.json';
+import graphData from '../json/graph-data.json';
 import policies from '../json/policies.json';
 import handwashing from "../img/handwash.png"
 import stringency from "../img/stringency.png"
+import age from '../media/old-man.png'
+import gdp from '../media/coin.png'
+import smoking from '../media/smoking.png'
+import syringe from '../media/syringe.png'
 
 export default function Sidebar(props){
   let country_name = getCountry[props.country]
@@ -51,7 +56,7 @@ export default function Sidebar(props){
     //Get Policies
     //TODO: Policy Validation
     // let polArray = Object.values(country["policies"]);
-    let stats = Object.values(country["statistics"])
+    // let stats = Object.values(country["statistics"])
 
     // const Policies = use_props.map( 
     //   (policy, idx)=> <CreatePolicy policy={policy} key={idx} name={name}/>
@@ -60,16 +65,46 @@ export default function Sidebar(props){
       <CreatePolicy policy={use_props[0]} key={0} name={country_name}/>,
       <CreatePolicy policy={use_props[1]} key={1} name={country_name}/>
     ]
-    const Statistics = <CreateStat infections={stats.infections}
-    deaths={stats.deaths} key={0}/>
+    let graphdata = graphData[country_name]
+    const Statistics = <CreateStat key={0} y={graphdata}/>
     
     //TODO: Add Statistics
     return [Policies, Statistics]
   }
   const CreateStat = function(props){
+    console.log(props.y)
+    let xaxis = Array.from(Array(33).keys())
+    let yaxis = Object.values(props.y)
+    let nums = [];
+    for(let i=0; i<yaxis.length; i++){
+      if (yaxis[i] != null){
+        nums.push(yaxis[i])
+      }
+    }
+    let mean;
+    if(nums.length > 0){
+      let sum = nums.reduce((accumulator, value) => {
+        return accumulator + value;
+      }, 0);
+      mean = sum/nums.length
+    }
+    else{
+      mean = 0;
+    }
+    let newyaxis = [];
+    for(let i=0; i<yaxis.length; i++){
+      if(yaxis[i] == null){
+        newyaxis[i] = mean
+      }
+      else{
+        newyaxis[i] = yaxis[i]
+      }
+    }
+    
+    console.log('yaxis', yaxis)
     let data = [{
-      x: [0, 1, 2, 3, 4, 5, 6],
-      y: [60, 120, 60, 40, 50, 20, 10],
+      x: xaxis,
+      y: newyaxis,
     }]
 
     return(
@@ -84,13 +119,26 @@ export default function Sidebar(props){
   let logos = {
     'Handwashing': handwashing,
     'Stringency Index': stringency,
+    'Economic Development': gdp,
+    'Male Smoking': smoking,
+    'Population Age': age,
+    'Vaccination Percentage': syringe
     //TODO: Add Logos for each new policy type
   }
   const CreatePolicy = function(props){
     let policy = props.policy;
     let policyname = policy[1]["name"]
     if(!policyname) return -1;
-    let logo = logos[policy["name"]];
+    let logo = logos[policyname];
+    let perc = Math.round(Math.abs(policy[2]))
+    let whatcrease;
+    if(policy[2] <= 0){
+      whatcrease = "decrease"
+    }
+    else{
+      whatcrease = "increase"
+    }
+
     return(
       <Grid h='220px' w='100%'
       templateRows='repeat(10, 1fr)' 
@@ -122,9 +170,9 @@ export default function Sidebar(props){
             </Text>
             <Text maxH='40%' mt='6px'
             fontSize='17px'>
-              CPE Estimates that if {props.name} significantly increased 
-              it's {policy["name"]} the rate of new deaths would decrease
-              by about {100*policy["influence"]}%.
+              CPE Estimates that if {props.name} increased it's {policyname} to 
+              the 90th percentile of countries the rate of new deaths would {whatcrease} by 
+              about {perc}%.
             </Text>
           </Box>
           </Center>
