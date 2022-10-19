@@ -16,7 +16,7 @@ function Search() {
 
   return (
     <Flex w='100%' color="white">
-        <Box border="1px" w="100%" h="90vh">
+        <Box w="100%" h="90vh">
           <Map setCountry={setCountry} />
           <Sidebar country={country} />
         </Box>

@@ -1,0 +1,22 @@
+{
+"people_vaccinated_per_hundred": {
+  "name": "Vaccination Percentage",
+  "body": "Covid Vaccination is one of the best ways to reduce the number of deaths and infections."
+},
+"stringency_index": {
+  "name": "Stringency Index",
+  "body": "Closing workplaces, schools, and other public facilities can help reduce infections."
+},
+"gdp_per_capita": {
+  "name": "Economic Development",
+  "body": "Countries with lower economic development often have fewer healthcare resources."
+},
+"male_smokers": {
+  "name": "Male Smoking",
+  "body": "Smoking increases the percentage of infections and deaths from Covid-19."
+},
+"median_age": {
+  "name": "Population Age",
+  "body": "Older populations are more at risk for Covid-19 and require extra resources."
+}
+}

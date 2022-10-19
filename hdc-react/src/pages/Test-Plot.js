@@ -19,8 +19,8 @@ const baseData = [
   },
 ];
 const baseLayout = {
-  width: 500, 
-  height: 500, 
+  width: 400, 
+  height: 400, 
   title: 'New Deaths',
   paper_bgcolor: "#1a202c",
   plot_bgcolor: "#1a202c",

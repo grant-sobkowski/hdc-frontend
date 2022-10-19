@@ -13,7 +13,7 @@ export default function Map(props){
     console.log('custom click event, country = ', cevt.country)
   }, false)
   return(
-    <Box id='map' h='100%' w='70%' border='1px' 
+    <Box id='map' h='100%' w='66%' marginRight='4%'
     float='left' display='inline-block'>
       <ComposableMap>
         <Geographies geography={geoUrl}>
