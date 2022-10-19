@@ -1,19 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  useColorMode,
-  Switch,
   Flex,
-  Spacer,
   Button,
-  IconButton,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 export const Nav = () => {
   // const { colorMode, toggleColorMode } = useColorMode();
   // const isDark = colorMode === "dark";
-  const [display, changeDisplay] = useState("none");
   return (
     <Flex>
       <Flex position="relative" top="1rem" left="1rem" align="center">

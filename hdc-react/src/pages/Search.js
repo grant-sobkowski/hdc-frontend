@@ -1,7 +1,6 @@
 import { React, useState, useEffect } from "react";
 import "../styles/search.css";
 import { Box, Flex } from "@chakra-ui/react";
-import Header from "../components/Header.js";
 import Map from "../components/Map.js";
 import Sidebar from "../components/Sidebar.js";
 // import ReactFullpage from "@fullpage/react-fullpage";

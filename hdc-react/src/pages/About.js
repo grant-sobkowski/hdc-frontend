@@ -6,12 +6,13 @@ function Home() {
   return (
     <Box>
       <Center>
-      <Heading>Covid Policy Estimator</Heading>
+        <Heading>About</Heading>
       </Center>
       <Center marginTop='30px' >
-      <Flex>
-        <Text fontSize='lg' as='i'>Covid Policy Estimator (CPE) can help policy makers around the world maker better decisions.</Text>
-      </Flex>
+        <Flex>
+          <Text fontSize='lg' as='i'>Covid Policy Advisor is still under development! This page will be home to more information in the future.
+          For now, try out the search page!</Text>
+        </Flex>
       </Center>
     </Box>
   );

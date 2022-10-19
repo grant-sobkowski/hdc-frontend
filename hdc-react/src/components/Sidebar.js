@@ -6,8 +6,7 @@ import getCountry from '../json/front-data.json';
 import newData from '../json/new-data.json';
 import graphData from '../json/graph-data.json';
 import policies from '../json/policies.json';
-import handwashing from "../img/handwash.png"
-import stringency from "../img/stringency.png"
+import stringency from "../media/stringency.png"
 import age from '../media/old-man.png'
 import gdp from '../media/coin.png'
 import smoking from '../media/smoking.png'
@@ -51,16 +50,7 @@ export default function Sidebar(props){
       return a[2] - b[2];
     });
     use_props = use_props.slice(0, 2)
-    console.log(use_props)
 
-    //Get Policies
-    //TODO: Policy Validation
-    // let polArray = Object.values(country["policies"]);
-    // let stats = Object.values(country["statistics"])
-
-    // const Policies = use_props.map( 
-    //   (policy, idx)=> <CreatePolicy policy={policy} key={idx} name={name}/>
-    // )
     const Policies = [
       <CreatePolicy policy={use_props[0]} key={0} name={country_name}/>,
       <CreatePolicy policy={use_props[1]} key={1} name={country_name}/>
@@ -117,7 +107,6 @@ export default function Sidebar(props){
   }
 
   let logos = {
-    'Handwashing': handwashing,
     'Stringency Index': stringency,
     'Economic Development': gdp,
     'Male Smoking': smoking,
